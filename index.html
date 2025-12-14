@@ -40,16 +40,17 @@
             background-repeat: no-repeat;
         }
 
-        #screen-1 { z-index: 10; background-image: url('gambar1.png'); transition: transform 0.8s ease-in-out; }
-        #screen-2 { z-index: 5; background-image: url('gambar2.png'); }
+        /* PERBAIKAN: Menambahkan 'images/' di depan nama file */
+        #screen-1 { z-index: 10; background-image: url('images/gambar1.png'); transition: transform 0.8s ease-in-out; }
+        #screen-2 { z-index: 5; background-image: url('images/gambar2.png'); }
 
-        #screen-bali       { background-image: url('bali.png'); }
-        #screen-sumatra    { background-image: url('sumatra.png'); }
-        #screen-sulawesi   { background-image: url('sulawesi.png'); }
-        #screen-kalimantan { background-image: url('kalimantan.png'); }
-        #screen-maluku     { background-image: url('maluku.png'); }
+        #screen-bali       { background-image: url('images/bali.png'); }
+        #screen-sumatra    { background-image: url('images/sumatra.png'); }
+        #screen-sulawesi   { background-image: url('images/sulawesi.png'); }
+        #screen-kalimantan { background-image: url('images/kalimantan.png'); }
+        #screen-maluku     { background-image: url('images/maluku.png'); }
         
-        #screen-quiz       { background-image: url('kuis.png'); }
+        #screen-quiz       { background-image: url('images/kuis.png'); }
         #screen-quiz::before {
             content: ''; position: absolute; top:0; left:0; width:100%; height:100%;
             background: rgba(0,0,0,0.6); 
@@ -58,67 +59,65 @@
 
         /* --- URUTAN SLIDE MATERI TAMBAHAN --- */
 
-        /* 1. DAMPAK (9000) */
+        /* 1. DAMPAK (9000) - File 1.png */
         #screen-ending { 
             z-index: 9000; 
-            background-image: url('1.png'); 
+            background-image: url('images/1.png'); 
             background-color: white; background-size: 100% 100%;
             opacity: 0; transform: scale(0.8); pointer-events: none;
             transition: all 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
         }
 
-        /* 2. TANTANGAN (9100) */
+        /* 2. TANTANGAN (9100) - File 11.png */
         #screen-challenge { 
             z-index: 9100; 
-            background-image: url('11.png'); 
+            background-image: url('images/11.png'); 
             background-color: white; background-size: 100% 100%;
             opacity: 0; transform: translateX(100%); pointer-events: none;
             transition: all 0.8s ease-in-out;
         }
 
-        /* 3. CARA MENGHARGAI (9200) */
+        /* 3. CARA MENGHARGAI (9200) - File 12.png */
         #screen-ways { 
             z-index: 9200; 
-            background-image: url('12.png'); 
+            background-image: url('images/12.png'); 
             background-color: white; background-size: 100% 100%;
             opacity: 0; transform: translateY(-100%); pointer-events: none;
             transition: all 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
         }
 
-        /* 4. PERAN KELUARGA (9300) */
+        /* 4. PERAN KELUARGA (9300) - File 13.png */
         #screen-family { 
             z-index: 9300; 
-            background-image: url('13.png'); 
+            background-image: url('images/13.png'); 
             background-color: white; background-size: 100% 100%;
             opacity: 0; transform: translateY(100%); pointer-events: none;
             transition: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
 
-        /* 5. PERAN SEKOLAH (9400) */
+        /* 5. PERAN SEKOLAH (9400) - File 14.png */
         #screen-school { 
             z-index: 9400; 
-            background-image: url('14.png'); 
+            background-image: url('images/14.png'); 
             background-color: white; background-size: 100% 100%;
             opacity: 0; transform: scale(2); pointer-events: none;
             transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
         }
 
-        /* 6. CONTOH MENGHARGAI (9500) */
+        /* 6. CONTOH MENGHARGAI (9500) - File 15.png */
         #screen-example { 
             z-index: 9500; 
-            background-image: url('15.png'); 
+            background-image: url('images/15.png'); 
             background-color: white; background-size: 100% 100%;
             opacity: 0; transform: translateX(-100%); pointer-events: none;
             transition: all 0.8s ease-in-out;
         }
 
-        /* 7. TERIMAKASIH (9600 - PALING ATAS) */
+        /* 7. TERIMAKASIH (9600) - File 16.png */
         #screen-thankyou { 
             z-index: 9600; 
-            background-image: url('16.png'); /* File Baru */
+            background-image: url('images/16.png'); 
             background-color: white; background-size: 100% 100%;
-            
-            /* Animasi: Fade In Lembut & Sedikit Membesar */
             opacity: 0; 
             transform: scale(1.1); 
             pointer-events: none;
@@ -359,7 +358,8 @@
             <!-- SOAL 1 -->
             <div class="question-box active" id="q1">
                 <div class="q-layout-row">
-                    <img src="/images/NUSANTARA.png" class="q-img" alt="Soal 1">
+                    <!-- PERBAIKAN: path images/ -->
+                    <img src="images/NUSANTARA.png" class="q-img" alt="Soal 1">
                     <div class="question-text">1. Rumah adat disamping merupakan rumah adat daerah...?</div>
                 </div>
                 <div class="options">
@@ -370,7 +370,7 @@
             </div>
             <!-- SOAL 2 -->
             <div class="question-box" id="q2">
-                <div class="q-layout-row"><img src="/images/B.png" class="q-img" alt="Soal 2"></div>
+                <div class="q-layout-row"><img src="images/B.png" class="q-img" alt="Soal 2"></div>
                 <div class="question-text center">2. Rumah Gadang, Rumah Balon, dan Rumah Limas merupakan rumah adat daerah...?</div>
                 <div class="options">
                     <button class="option-btn" onclick="pilihJawaban(2, 'A')">A. Kalimantan</button>
@@ -380,7 +380,7 @@
             </div>
             <!-- SOAL 3 -->
             <div class="question-box" id="q3">
-                <div class="q-layout-row"><img src="/images/27.png" class="q-img" alt="Soal 2"></div>
+                <div class="q-layout-row"><img src="images/27.png" class="q-img" alt="Soal 2"></div>
                 <div class="question-text center">3. Rumah adat suku Dayak dan suku Banjar terletak di daerah...?</div>
                 <div class="options">
                     <button class="option-btn" onclick="pilihJawaban(3, 'A')">A. Papua</button>
@@ -390,7 +390,7 @@
             </div>
             <!-- SOAL 4 -->
             <div class="question-box" id="q4">
-                <div class="q-layout-row"><img src="/images/28.png" class="q-img" alt="Soal 4"></div>
+                <div class="q-layout-row"><img src="images/28.png" class="q-img" alt="Soal 4"></div>
                 <div class="question-text">4. Rumah Baileo merupakan rumah adat daerah...</div>
                 <div class="options">
                     <button class="option-btn" onclick="pilihJawaban(4, 'A')">A. Bali</button>
@@ -556,5 +556,4 @@
 </script>
 
 </body>
-
 </html>
