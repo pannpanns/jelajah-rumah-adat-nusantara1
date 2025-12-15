@@ -131,6 +131,18 @@
             object-fit: contain;
         }
 
+          .q-img1 {
+            width: auto;  
+            max-width: 100%;
+            height: auto; 
+            max-height: 70%;
+            background-color: transparent; 
+            border: none;
+            box-shadow: none;
+            object-fit: contain;
+        }
+
+
         .question-text {
             font-size: 1.6vw; 
             color: #333;
@@ -267,6 +279,7 @@
         <div class="btn-back" onclick="tutupQuiz()">Batal</div>
 
         <div class="quiz-container" id="quiz-box-container">
+            
             <div class="question-box active" id="q1">
                 <div class="q-layout-row">
                     <img src="images/NUSANTARA.png" class="q-img" alt="Soal 1">
@@ -278,41 +291,63 @@
                     <button class="option-btn" onclick="pilihJawaban(1, 'C')">C. Bali</button>
                 </div>
             </div>
-            <div class="question-box" id="q2">
-                <div class="q-layout-row"><img src="images/A.png" class="q-img" alt="Soal 2"></div>
-                <div class="question-text center">2. Rumah Gadang, Rumah Balon, dan Rumah Limas merupakan rumah adat daerah...?</div>
+
+            <div class="question-box active" id="q2">
+                <div class="q-layout-row">
+                    <img src="images/A.png" class="q-img" alt="Soal 2">
+                    <div class="question-text center">2. Rumah Gadang, Rumah Balon, dan Rumah Limas merupakan rumah adat daerah...?</div>
+                </div>
                 <div class="options">
                     <button class="option-btn" onclick="pilihJawaban(2, 'A')">A. Jawa</button>
                     <button class="option-btn" onclick="pilihJawaban(2, 'B')">B. Kalimantan</button>
                     <button class="option-btn" onclick="pilihJawaban(2, 'C')">C. Sumatra</button>
                 </div>
             </div>
+
             <div class="question-box" id="q3">
-                <div class="q-layout-row"><img src="images/B.png" class="q-img" alt="Soal 2"></div>
-                <div class="question-text center">3. Rumah adat yang menggunakan bahan alami, memiliki pintu gerbang angkul angkul, dan memiliki halaman tengah merupakan rumah adat daerah...?</div>
+                <div class="q-layout-row">
+                    <img src="images/B.png" class="q-img1" alt="Soal 3">
+                    <div class="question-text center">3. Rumah adat yang menggunakan bahan alami, memiliki pintu gerbang angkul angkul, dan memiliki halaman tengah merupakan rumah adat daerah...?</div>
+                </div>
                 <div class="options">
                     <button class="option-btn" onclick="pilihJawaban(3, 'A')">A. Kalimantan</button>
                     <button class="option-btn" onclick="pilihJawaban(3, 'B')">B. Maluku</button>
                     <button class="option-btn" onclick="pilihJawaban(3, 'C')">C. Bali</button>
                 </div>
             </div>
+
             <div class="question-box" id="q4">
-                <div class="q-layout-row"><img src="images/27.png" class="q-img" alt="Soal 4"></div>
-                <div class="question-text">4. Rumah adat suku Dayak dan suku Banjar terletak di daerah...?</div>
+                <div class="q-layout-row">
+                    <img src="images/27.png" class="q-img" alt="Soal 4">
+                    <div class="question-text">4. Rumah adat suku Dayak dan suku Banjar terletak di daerah...?</div>
+                </div>
                 <div class="options">
                     <button class="option-btn" onclick="pilihJawaban(4, 'A')">A. Papua</button>
                     <button class="option-btn" onclick="pilihJawaban(4, 'B')">B. Kalimantan</button>
                     <button class="option-btn" onclick="pilihJawaban(4, 'C')">C. Sumatra</button>
                 </div>
             </div>
-                <div class="question-box" id="q5">
-                <div class="q-layout-row"><img src="images/28.png" class="q-img" alt="Soal 5"></div>
-                <div class="question-text">5. Rumah Baileo merupakan rumah adat daerah......?</div>
+
+            <div class="question-box" id="q5">
+                <div class="q-layout-row">
+                    <img src="images/28.png" class="q-img" alt="Soal 5">
+                    <div class="question-text">5. Rumah Baileo merupakan rumah adat daerah......?</div>
+                </div>
                 <div class="options">
                     <button class="option-btn" onclick="pilihJawaban(5, 'A')">A. Bali</button>
                     <button class="option-btn" onclick="pilihJawaban(5, 'B')">B. Maluku</button>
                     <button class="option-btn" onclick="pilihJawaban(5, 'C')">C. Sulawesi</button>
                 </div>
+            </div>
+
+            <div class="question-box" id="result-box">
+                <div class="q-layout-row" style="width: 100%;">
+                    <h1 style="color: #2c3e50; margin-bottom: 20px; font-size: 2vw;">Selamat! 🎉</h1>
+                    <div class="question-text center" style="font-weight: normal;">
+                        Kamu telah menyelesaikan semua pertanyaan dengan baik.
+                    </div>
+                </div>
+                <button class="action-btn ending-btn show" onclick="bukaDampakPositif()"> Next </button>
             </div>
 
             <div class="question-box" id="result-box">
